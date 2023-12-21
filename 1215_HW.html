@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Number Guessing</title>
+</head>
+<body>
+
+  <script>
+    // JavaScript code
+    var rand = Math.floor((Math.random() * 10) + 1);
+    var guessedNumber = parseInt(prompt("Guess a number between 1 and 10:"));
+
+    while (guessedNumber !== rand) {
+        if (isNaN(guessedNumber) || guessedNumber < 1 || guessedNumber > 10) {
+            guessedNumber = parseInt(prompt("Please enter a valid number between 1 and 10:"));
+        } else {
+            guessedNumber = parseInt(prompt("Incorrect! Try again. Guess a number between 1 and 10:"));
+        }
+    }
+
+    alert("Congratulations! You guessed the correct number: " + rand);
+  </script>
+
+</body>
+</html>
